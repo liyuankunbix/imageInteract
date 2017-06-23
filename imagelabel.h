@@ -17,9 +17,9 @@ public:
 protected:
 
     virtual void mousePressEvent(QMouseEvent *evt);
+    virtual void mouseReleaseEvent(QMouseEvent *evt);
     virtual void mouseMoveEvent(QMouseEvent *ev);
     virtual void paintEvent(QPaintEvent *ev);
-    virtual void mouseReleaseEvent(QMouseEvent *evt);
 
 private:
     QScrollArea *scrollArea;

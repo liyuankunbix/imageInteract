@@ -34,7 +34,14 @@ void ImageLabel::mousePressEvent( QMouseEvent *evt )
     update();
 }
 
-void ImageLabel::mouseMoveEvent( QMouseEvent *ev )
+void ImageLabel::mouseReleaseEvent( QMouseEvent *evt )
+{
+    x = evt->x();
+    y = evt->y();
+    update();
+}
+
+void ImageLabel::mouseMoveEvent( QMouseEvent *evt )
 {
 
 }
@@ -42,6 +49,6 @@ void ImageLabel::mouseMoveEvent( QMouseEvent *ev )
 void ImageLabel::paintEvent(QPaintEvent *ev)
 {
     QPainter painter(this);
-    painter.drawPixmap(0, 0, BackgroundPixmap);
+    //painter.drawPixmap(0, 0, BackgroundPixmap);
     painter.drawPixmap(x, y, SmallPixmap);
 }
